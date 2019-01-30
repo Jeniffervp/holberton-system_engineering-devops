@@ -1,2 +1,2 @@
-#!/bin/bal
+#!/bin/bash
 chgrp holberton:hello
