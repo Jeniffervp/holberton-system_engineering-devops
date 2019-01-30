@@ -1,2 +1,2 @@
 #!/bin/bal
-chown -g  hello holberton
+chown holberton hello
