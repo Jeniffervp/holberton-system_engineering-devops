@@ -1,2 +1,3 @@
 #!/bin/bash
-chmod u+x 8-cwd_state
+echo "ls -la">ls_cwd_content
+
