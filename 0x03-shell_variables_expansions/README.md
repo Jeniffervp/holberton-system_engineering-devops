@@ -1,0 +1,1 @@
+Here you can find some ways to used alias, echo, exoantions, variables, shell arithmetic.
