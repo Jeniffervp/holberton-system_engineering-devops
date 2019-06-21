@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# display bad luck at the 4th, good luck at the 8th
+a=1
+while (( a<=10 ))
+do
+   if (( a==4 ))
+   then
+       echo "bad luck"
+
+   elif (( a==8 ))
+   then
+       echo "good luck"
+
+   else
+       echo "Holberton School"
+   fi
+   : $(( a++ ))
+done
