@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Display "Holberton School" 10 times an at the 9th print hi
+a=0
+while (( a<10 ))
+do
+   echo "Holberton School"
+   if (( a==8 ))
+   then
+       echo "Hi"
+   fi
+
+   : $(( a++ ))
+done
