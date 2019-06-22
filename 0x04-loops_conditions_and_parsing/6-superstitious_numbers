@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# display bad luck at the 4th, good luck at the 8th
+a=1
+while (( a<=20 ))
+do
+    echo "$a"
+    case $a in
+	4)
+	    echo "bad luck from China";;
+	9)
+	    echo "bad luck from Japan";;
+	17)
+	    echo "bad luck from Italy";;
+    esac
+    : $(( a++ ))
+done
