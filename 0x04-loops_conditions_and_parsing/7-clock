@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# display the time
+hora=0
+min=1
+
+echo "Hour: $hora"
+while (( hora<=12 ))
+do
+    echo "$min"
+    : $(( min++ ))
+    if (( min>59 ))
+    then
+	if (( hora<12 ))
+	then
+	    : $(( hora++ ))
+	    min=1
+    	    echo "Hour: $hora"
+	else
+	    : $(( hora++ ))
+	fi
+    fi
+done
