@@ -1,4 +1,4 @@
-# 0x1C. C - Makefiles
+# 0x06. Regular expression
 
 ![N|Solid](https://i.imgur.com/EtpU3ss.jpg)
 
