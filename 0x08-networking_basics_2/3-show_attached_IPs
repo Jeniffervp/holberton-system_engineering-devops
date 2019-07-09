@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#display all the active IPv4 active
+ip addr show | grep -Po 'inet \K[\d.]+'
