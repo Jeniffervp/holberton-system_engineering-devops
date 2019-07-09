@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#making a netcat
+nc -l 98
