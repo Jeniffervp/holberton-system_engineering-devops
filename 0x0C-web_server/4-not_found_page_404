@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#config nginx to have an 404 error page
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo sed -i "30i \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=mUiazw80Lzo permanent;" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/is_dead_404_error.html
+sudo sed -i "30i \\\terror_page 404 /is_dead_404_error.html;\n\tlocation = /is_dead_404_error.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default
+sudo service nginx restart
