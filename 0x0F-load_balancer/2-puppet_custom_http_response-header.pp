@@ -11,10 +11,10 @@ ensure => 'present',
 -> file_line { 'check a line':
 ensure => 'present',
 path   => '/etc/nginx/sites-available/default',
-line   => "   location/ {
- 	     \tadd_header X-Served-By ${hostname};",
+line   => "   location / {
+             add_header X-Served-By ${hostname};",
 match  => '^\tlocation / {',
 }
 -> exec { 'start/restart server':
-comand => '/usr/sbin/service nginx restart',
+command => '/usr/sbin/service nginx restart',
 }
