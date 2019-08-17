@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#install a haproxy in load balancer
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+echo "
+frontend Jeniffer
+         bind *:80
+         default_backend Jeniffer_Servers
+
+backend Jeniffer_Servers
+        balance roundrobin
+        option forwardfor
+        server 737-web-01 35.190.156.211
+        server 737-web-02 34.73.132.239
+" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service haproxy start
