@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Create a function to print info of url
+# shellcheck disable=SC2086
+
+funcion(){
+    if [ "$#" -eq 2 ]
+    then
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -v shelly="$2" 'NR==2 {print "The subdomain "shelly" is a " $4 " record and points to " $5}'
+    else
+	dig "www.$1" | grep -A1 'ANSWER SECTION:' | awk -v shelly="www" 'NR==2 {print "The subdomain "shelly" is a " $4 " record and points to " $5}'
+	dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | awk -v shelly="lb-01" 'NR==2 {print "The subdomain "shelly" is a " $4 " record and points to " $5}'
+	dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | awk -v shelly="web-01" 'NR==2 {print "The subdomain "shelly" is a " $4 " record and points to " $5}'
+	dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | awk -v shelly="web-02" 'NR==2 {print "The subdomain "shelly" is a " $4 " record and points to " $5}'
+    fi
+}
+
+funcion $1 $2
