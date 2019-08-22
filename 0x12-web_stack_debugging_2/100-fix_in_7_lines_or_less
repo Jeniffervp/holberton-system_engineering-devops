@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#run the process as the less privileged nginx user
+sudo pkill -9 apache2
+sudo chown -R nginx:nginx /etc/nginx/nginx.conf
+sudo chmod 644 /etc/nginx/nginx.conf
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo -u "nginx" bash -c 'service nginx restart'
