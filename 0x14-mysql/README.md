@@ -1,6 +1,6 @@
 # 0x04. AirBnB clone - Web framework
 
-![N|Solid]()
+![N|Solid](https://i.imgur.com/tY6OReJ.jpg)
 
 ### SQL Replication
 
