@@ -18,4 +18,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):"
           .format(nm_usr.get('name'), len(info), len(to_do)))
     for otro in info:
-        print('\t{}'.format(otro))
+        print('\t {}'.format(otro))
