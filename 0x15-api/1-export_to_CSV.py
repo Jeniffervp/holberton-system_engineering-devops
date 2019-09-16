@@ -14,7 +14,5 @@ if __name__ == "__main__":
     with open('{}.csv'.format(argv[1]), 'w') as my_csv:
         w_csv = csv.writer(my_csv, quoting=csv.QUOTE_ALL)
         for a in to_do:
-            data = []
-            data = [a.get('userId'), usr.get('username'),
-                    a.get('completed'), a.get('title')]
-            w_csv.writerow(data)
+            w_csv.writerow([a.get('userId'), usr.get('username'),
+                    a.get('completed'), a.get('title')])
