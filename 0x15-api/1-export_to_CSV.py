@@ -15,4 +15,4 @@ if __name__ == "__main__":
         w_csv = csv.writer(my_csv, quoting=csv.QUOTE_ALL)
         for a in to_do:
             w_csv.writerow([a.get('userId'), usr.get('username'),
-                    a.get('completed'), a.get('title')])
+                            a.get('completed'), a.get('title')])
