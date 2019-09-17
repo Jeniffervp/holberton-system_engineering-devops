@@ -18,7 +18,6 @@ if __name__ == "__main__":
         data[id_u] = []
 
         for a in to_do:
-            data_2 = a.get("title"), a.get("completed"), usr.get("username")
             data[id_u].append({
                 "task": a.get("title"),
                 "completed": a.get("completed"),
