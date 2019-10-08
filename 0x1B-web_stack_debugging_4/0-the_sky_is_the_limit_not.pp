@@ -1,3 +1,5 @@
+# Replace the number of allow files to open
+
 file { '/etc/default/nginx':
   ensure => 'present',
 }
