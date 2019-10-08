@@ -8,6 +8,6 @@ file { '/etc/default/nginx':
 }
 
 -> exec { 'restart':
-  command => "sudo service nginx restart",
+  command => 'sudo service nginx restart',
   path    => ['/usr/bin','/usr/sbin'],
 }
